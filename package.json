@@ -22,5 +22,9 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/hexo generate"
-  }
+  },
+  "engines":{
+	  "node":"4.4.7",
+	  "npm": "3.7.3"
+	  }
 }

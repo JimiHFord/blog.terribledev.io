@@ -113,6 +113,9 @@ selectNodeVersion
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
+  cd "$DEPLOYMENT_TARGET/themes/tranquilpeak"
+  cd "$DEPLOYMENT_TARGET"
+  eval $NPM_CMD install
   eval ./node_modules/.bin/hexo generate
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
